@@ -66,7 +66,20 @@ const pessoa2 = lista.reduce((acc, objeto) => {
 }, {});  //as úlitmas chaves representam o valor inicial, ou seja, por exemplo, poderia ser Julio:{ nome: 'Julio', idade: 26}
 
 console.log(pessoa2);
+// {
+//     Jose: { nome: 'Jose', idade: 13 },
+//     Joao: { nome: 'Joao', idade: 42 },
+//     Maria: { nome: 'Maria', idade: 23 },
+//     Gabriela: { nome: 'Gabriela', idade: 25 },
+//     Fernanda: { nome: 'Fernanda', idade: 65 },
+//     'André': { nome: 'André', idade: 69 },
+//     Heitor: { nome: 'Heitor', idade: 32 },
+//     Gustavo: { nome: 'Gustavo', idade: 64 },
+//     Sandra: { nome: 'Sandra', idade: 33 }
+//   }
+
 console.log(pessoa2.Gustavo.idade);
+// 64
 
 const pessoa3 = lista.reduce((acc, objeto) => {
     return {
@@ -78,6 +91,18 @@ const pessoa3 = lista.reduce((acc, objeto) => {
 }, { Julio: { nome: 'Julio', idade: 26 } });
 
 console.log(pessoa3);
+// {
+//     Julio: { nome: 'Julio', idade: 26 },
+//     Jose: { nome: 'Jose', idade: 13 },
+//     Joao: { nome: 'Joao', idade: 42 },
+//     Maria: { nome: 'Maria', idade: 23 },
+//     Gabriela: { nome: 'Gabriela', idade: 25 },
+//     Fernanda: { nome: 'Fernanda', idade: 65 },
+//     'André': { nome: 'André', idade: 69 },
+//     Heitor: { nome: 'Heitor', idade: 32 },
+//     Gustavo: { nome: 'Gustavo', idade: 64 },
+//     Sandra: { nome: 'Sandra', idade: 33 }
+//   }
 
 const pessoasArray = lista.reduce((acc, objeto) => {
     acc.push(objeto.idade);
@@ -85,3 +110,7 @@ const pessoasArray = lista.reduce((acc, objeto) => {
 }, []);
 
 console.log(pessoasArray);
+// [
+//     13, 42, 23, 25, 65,
+//     69, 32, 64, 33
+//   ]
