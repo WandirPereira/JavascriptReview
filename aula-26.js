@@ -37,11 +37,22 @@ const lista = [
         idade: 33
     }
 ]
-
+console.log("Retorna a lista");
 console.log(lista);
 
+
+console.log("Retorna somente um campo");
+const convertObjeto = (objeto) => {
+    return objeto.idade;
+}
+console.log(lista.map(convertObjeto));
+
+console.log("Retorna somente um campo");
 console.log(lista.map((x) => x.idade));
 
+
+
+console.log("Retorna todo o objeto + um campo concatenado");
 console.log(lista.map((objeto) => {
     return {
         nome: objeto.nome,
@@ -51,7 +62,26 @@ console.log(lista.map((objeto) => {
 }
 ));
 
+console.log("Retorna mais de um campo");
+const convertObjeto2 = (objeto) => {
+    return {
+        nome: objeto.nome,
+        idade: objeto.idade
+    }
+}
+console.log(lista.map(convertObjeto2));
+
+
 console.log("Spread01");
+console.log(lista.map((objeto) => {
+    return {
+        ...objeto
+    }
+}
+));
+
+
+console.log("Spread02");
 console.log(lista.map((objeto) => {
     return {
         ...objeto,
@@ -60,13 +90,6 @@ console.log(lista.map((objeto) => {
 }
 ));
 
-console.log("Spread02");
-console.log(lista.map((objeto) => {
-    return {
-        ...objeto
-    }
-}
-));
 
 console.log("Spread03");
 console.log(lista.map((objeto) => {
@@ -78,18 +101,4 @@ console.log(lista.map((objeto) => {
 ));
 
 
-const convertObjeto = (objeto) => {
-    return objeto.idade;
-}
 
-console.log(lista.map(convertObjeto));
-
-const convertObjeto2 = (objeto) => {
-    return {
-        nome: objeto.nome,
-        idade: objeto.idade
-    }
-}
-
-
-console.log(lista.map(convertObjeto2));
